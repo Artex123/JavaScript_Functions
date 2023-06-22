@@ -2,6 +2,10 @@ console.log("Hello World!\n==========\n");
 
 // Exercise 1 Section
 function printOdds(count){
+    if(count < 0){
+        console.log("Wrong answer, need a positive to be positive.")
+        return;
+    }
     for(let i = 1; i <= count; i++){
         if(i % 2 != 0){
             console.log(i);
@@ -11,6 +15,10 @@ function printOdds(count){
 printOdds(10);
 // Exercise 2 Section
 function checkAge(name, age){
+    if(!name || !age){
+        console.log("I will need a name and age, please try again.")
+        return;
+    }
     let drive = `Neat ${name}, you can drive (hopefully safely).`;
     let noDrive = `Access denied ${name}, you do not have the age clearance to drive`;
     if (age < 16){
